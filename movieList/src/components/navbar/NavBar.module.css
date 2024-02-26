@@ -1,0 +1,54 @@
+header {
+    padding: 1em;
+    background: linear-gradient(rgb(0, 0, 0, 0.7), transparent);
+}
+
+nav {
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    color: aliceblue;
+}
+
+nav a {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 0 20px;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+nav a:hover {
+    color: rgb(130, 129, 129);
+}
+
+.search-form input {
+    width: 15vw;
+    padding: 1.2vh;
+    font-size: 2.3vh;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+.search-form input:hover {
+    cursor: pointer;
+}
+
+.search-form input::placeholder {
+    color: rgb(180, 187, 192);
+}
+
+.search-form button {
+    background-color: transparent;
+    overflow: hidden;
+    color: aliceblue;
+    font-size: 3vh;
+    border: none;
+}
+
+.search-form button:hover {
+    color: rgb(130, 129, 129);
+    cursor: pointer;
+}
