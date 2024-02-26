@@ -1,3 +1,4 @@
+import Footer from "./components/footer/Footer"
 import NavBar from "./components/navbar/NavBar"
 import Table from "./components/table/Table"
 
@@ -6,6 +7,7 @@ function App() {
     <>
       <NavBar />
       <Table />
+      <Footer />
     </>
   )
 }
