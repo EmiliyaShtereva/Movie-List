@@ -1,29 +1,10 @@
 footer {
-    padding-top: 3em;
+    padding-top: 2.5em;
     position: absolute;
     width: 100%;
     background: rgb(11, 11, 11);
     text-align: center;
     color: white;
-  }
-  
-  footer button {
-    border-radius: 50%;
-    border: none;
-    height: 5vh;
-    width: 2.3vw;
-    font-size: 2.7vh;
-    margin: 0 3px;
-    background-color: rgb(231, 230, 230);
-  }
-  
-  footer button:hover {
-    background-color: rgb(195, 195, 195);
-    cursor: pointer;
-  }
-  
-  footer .other-pages {
-    margin-top: 25px;
   }
   
   footer .other-pages a{
@@ -37,7 +18,7 @@ footer {
   }
   
   footer .copyright {
-    margin-top: 50px;
+    margin-top: 30px;
     padding: 2px;
     background-color: black;
   }
