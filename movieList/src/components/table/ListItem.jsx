@@ -1,3 +1,4 @@
+import Modal from '../modal/Modal'
 import styles from './ListItem.module.css'
 
 export default function ListItem() {
@@ -9,18 +10,17 @@ export default function ListItem() {
                 </td>
                 <td className={styles['movie']}>
                     <p className={styles['movie-name']}>Movie Name</p>
-                    <div className={styles['invited-friends']}>
-                        <img src="https://s.hdnux.com/photos/51/23/24/10827008/4/1200x0.jpg" alt="" />
-                        <img src="https://s.hdnux.com/photos/51/23/24/10827008/4/1200x0.jpg" alt="" />
-                        <img src="https://s.hdnux.com/photos/51/23/24/10827008/4/1200x0.jpg" alt="" />
-                        <p>+1</p>
-                    </div>
+                </td>
+                <td className={styles['invited-friends']}>
+                    <p>First Last, First Last, First last, First Last, First Last, First Last, First last, First Last </p>
                 </td>
                 <td className={styles['buttons']}>
                     <button>Invite friends</button>
                     <button><i className="fa-solid fa-info"></i></button>
                 </td>
             </tr>
+
+            {/* <Modal /> */}
         </>
     )
 }

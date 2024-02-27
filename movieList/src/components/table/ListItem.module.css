@@ -14,11 +14,7 @@ td {
     border-radius: 5px;
 }
 
-.movie{
-    vertical-align: top;
-}
-
-.movie-name{
+.movie-name {
     margin: 10px 0 15px 0;
     font-size: x-large;
     vertical-align: top;
@@ -29,24 +25,9 @@ td {
 }
 
 .invited-friends {
-    width: 100px;
-}
-
-.invited-friends img {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: black;
-}
-
-.invited-friends p {
-    margin: 0;
-    float: right;
-    width: 25px;
-    height: 25px;
-    font-size: 20px;
-    border-radius: 50%;
-    background-color: rgb(0, 0, 0, 0.3);
+    text-align: center;
+    width: 450px;
+    font-size: large;
 }
 
 .buttons {
@@ -70,3 +51,4 @@ td {
     border: 1px solid rgba(255, 255, 255, 0.3);
     cursor: pointer;
 }
+
