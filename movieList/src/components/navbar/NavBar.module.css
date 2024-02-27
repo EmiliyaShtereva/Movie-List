@@ -1,35 +1,23 @@
 header {
-    padding: 1em;
+    padding: 2em 0 0 0;
     background: linear-gradient(rgb(0, 0, 0, 0.7), transparent);
 }
 
 nav {
     height: 5vh;
     display: flex;
-    justify-content: space-between;
-    color: aliceblue;
-}
-
-nav a {
-    font-size: 1.6rem;
-    font-weight: 400;
-    padding: 0 20px;
-    text-decoration: none;
-    color: aliceblue;
-}
-
-nav a:hover {
-    color: rgb(130, 129, 129);
+    justify-content:center;
 }
 
 .search-form input {
-    width: 15vw;
-    padding: 1.2vh;
+    width: 55vw;
+    height: 5vh;
+    padding-left: 1.2vh;
     font-size: 2.3vh;
     border: none;
     background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    color: aliceblue;
+    border-radius: 5px;
+    color: rgb(196, 196, 196);
 }
 
 .search-form input:hover {
@@ -43,7 +31,7 @@ nav a:hover {
 .search-form button {
     background-color: transparent;
     overflow: hidden;
-    color: aliceblue;
+    color: rgb(196, 196, 196);
     font-size: 3vh;
     border: none;
 }
