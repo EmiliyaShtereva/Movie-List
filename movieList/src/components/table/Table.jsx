@@ -1,3 +1,4 @@
+import Pagination from '../pagination/Pagination'
 import ListItem from './ListItem'
 import styles from './Table.module.css'
 
@@ -21,6 +22,7 @@ export default function Table() {
                     <ListItem />
                 </tbody>
             </table>
+            <Pagination />
         </>
     )
 }

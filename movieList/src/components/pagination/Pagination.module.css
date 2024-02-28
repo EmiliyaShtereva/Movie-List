@@ -1,0 +1,32 @@
+.pagination {
+    margin: 5vh 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+}
+
+button {
+    background-color: rgb(0, 0, 0, 0.3);
+    font-size: large;
+    border: none;
+    color: rgb(196, 196, 196);
+    padding: 12px 20px;
+    text-decoration: none;
+}
+
+button:focus,
+button:hover {
+    background: #000000;
+    color: white;
+}
+
+li:first-child button {
+    border-radius: 4px 0 0 4px;
+}
+
+li:last-child button {
+    border-radius: 0 4px 4px 0;
+}
