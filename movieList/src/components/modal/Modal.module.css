@@ -16,7 +16,7 @@
     padding: 20px;
     border: 1px solid rgb(255, 255, 255, 0.1);
     border-radius: 5px;
-    width: 40%;
+    width: 45%;
     max-height: 45vh;
     overflow: auto;
 }
@@ -66,14 +66,17 @@
 }
 
 .search-form button {
-    background-color: transparent;
+    margin-left: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
     overflow: hidden;
     color: rgb(196, 196, 196);
-    font-size: 3vh;
+    font-size: large;
+    height: 5.2vh;
     border: none;
+    border-radius: 5px;
 }
 
 .search-form button:hover {
-    color: rgb(130, 129, 129);
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }

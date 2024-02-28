@@ -7,7 +7,7 @@ export default function Modal() {
                 <span className={styles["close"]}>&times;</span>
                 <form className={styles["search-form"]}>
                     <input type="text" placeholder="Search friend..." name="search" />
-                    <button type="submit"><i className="fa fa-search"></i></button>
+                    <button type="submit">Invite friends</button>
                 </form>
                 <p>Invited Friends:</p>
                 <div className={styles["friends"]}>
