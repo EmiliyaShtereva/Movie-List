@@ -7,7 +7,6 @@ export default function NavBar() {
                 <div>
                     <form className={styles["search-form"]}>
                         <input type="text" placeholder="Search movie..." name="search" />
-                        <button type="submit"><i className="fa fa-search"></i></button>
                     </form>
                 </div>
             </nav>
