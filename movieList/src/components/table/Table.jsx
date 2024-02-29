@@ -36,7 +36,12 @@ export default function Table() {
                     ))}
                 </tbody>
             </table>
-            <Pagination />
+
+            <Pagination
+                {...data}
+                currentPage={currentPage}
+                setCurrentPage={setCurrentPage}
+            />
         </>
     )
 }
