@@ -1,0 +1,157 @@
+{
+  "friends": [
+    {
+      "id": "1",
+      "name": "Jesica Hopkins"
+    },
+    {
+      "id": "2",
+      "name": "Vlado Petrankov"
+    },
+    {
+      "id": "3",
+      "name": "Ema Stoyanova"
+    },
+    {
+      "id": "4",
+      "name": "Nick Pekov"
+    },
+    {
+      "id": "5",
+      "name": "Nasko Kashona"
+    },
+    {
+      "id": "6",
+      "name": "Ekaterina Velika"
+    }
+  ],
+  "movies": [
+    {
+      "id": "1",
+      "img": "https://m.media-amazon.com/images/M/MV5BNGIyYWMzNjktNDE3MC00YWQyLWEyMmEtN2ZmNzZhZDk3NGJlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+      "name": "Poor Things",
+      "duration": "2h 21min",
+      "rating": "8.3",
+      "synopsis": "The incredible tale about the fantastical evolution of Bella Baxter, a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter.",
+      "invitedFriends": [
+        "Jesica Hopkins",
+        "Vlado Petrankov",
+        "Ema Stoyanova"
+      ]
+    },
+    {
+      "id": "2",
+      "img": "https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg",
+      "name": "Oppenheimer",
+      "duration": "3h",
+      "rating": "8.4",
+      "synopsis": "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
+      "invitedFriends": []
+    },
+    {
+      "id": "3",
+      "img": "https://m.media-amazon.com/images/M/MV5BMDQ0NjgyN2YtNWViNS00YjA3LTkxNDktYzFkZTExZGMxZDkxXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg",
+      "name": "Dune",
+      "duration": "2h 35min",
+      "rating": "8.0",
+      "synopsis": "A noble family becomes embroiled in a war for control over the galaxy's most valuable asset while its heir becomes troubled by visions of a dark future.",
+      "invitedFriends": [
+        "Jesica Hopkins",
+        "Vlado Petrankov",
+        "Ema Stoyanova",
+        "Nick Pekov",
+        "Nasko Kashona"
+      ]
+    },
+    {
+      "id": "4",
+      "img": "https://m.media-amazon.com/images/M/MV5BNDM4NTk0NjktZDJhMi00MmFmLTliMzEtN2RkZDY2OTNiMDgzXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+      "name": "Wonka",
+      "duration": "1h 56min",
+      "rating": "7.1",
+      "synopsis": "With dreams of opening a shop in a city renowned for its chocolate, a young and poor Willy Wonka discovers that the industry is run by a cartel of greedy chocolatiers.",
+      "invitedFriends": []
+    },
+    {
+      "id": "5",
+      "img": "https://m.media-amazon.com/images/M/MV5BNWFkNzI5NDQtY2QyZS00NGE2LWJiNDEtMTI5ZTFmNDE0ZjcwXkEyXkFqcGdeQXVyNjk1NzU1Mjk@._V1_FMjpg_UX1000_.jpg",
+      "name": "Demon Slayer: Kimetsu No Yaiba - To the Hashira Training",
+      "duration": "1h 44min",
+      "rating": "6.8",
+      "synopsis": "Tanjiro undergoes rigorous training with the Stone Hashira, Himejima, in his quest to become a Hashira. Meanwhile, Muzan continues to search for Nezuko and Ubuyashiki.",
+      "invitedFriends": []
+    },
+    {
+      "id": "6",
+      "img": "https://movinbed.com/wp-content/uploads/2024/01/GBK2pGzXcAE0ok8.jpg",
+      "name": "Madame Web",
+      "duration": "1h 56min",
+      "rating": "3.8",
+      "synopsis": "Cassandra Webb is a New York metropolis paramedic who begins to demonstrate signs of clairvoyance. Forced to challenge revelations about her past, she needs to safeguard three young women from a deadly adversary who wants them destroyed.",
+      "invitedFriends": []
+    },
+    {
+      "id": "7",
+      "img": "https://m.media-amazon.com/images/M/MV5BYmY2YmEyYTItYjA4Yy00MTNmLTg1ZDgtNjFlM2QzMDI4MTM2XkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_FMjpg_UX1000_.jpg",
+      "name": "Ordinary Angels",
+      "duration": "1h 58min",
+      "rating": "8.0",
+      "synopsis": "Inspired by the incredible true story of a hairdresser who single-handedly rallies an entire community to help a widowed father save the life of his critically ill young daughter.",
+      "invitedFriends": []
+    },
+    {
+      "id": "8",
+      "img": "https://m.media-amazon.com/images/M/MV5BY2U4M2NmY2ItMjAyNC00NzM1LTg3ZTEtNzVlYjEzNTE5NDI5XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg",
+      "name": "Bob Marley: One Love",
+      "duration": "1h 47min",
+      "rating": "6.5",
+      "synopsis": "The story of how reggae icon Bob Marley overcame adversity, and the journey behind his revolutionary music.",
+      "invitedFriends": []
+    },
+    {
+      "id": "9",
+      "img": "https://m.media-amazon.com/images/M/MV5BYjQxMWY5NjgtNDI2NS00MWM2LTg2MDAtNjI5NGIwZTNmYWZiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+      "name": "Migration",
+      "duration": "1h 23min",
+      "rating": "6.7",
+      "synopsis": "A family of ducks try to convince their overprotective father to go on the vacation of a lifetime.",
+      "invitedFriends": []
+    },
+    {
+      "id": "10",
+      "img": "https://m.media-amazon.com/images/M/MV5BZDM3YTg4MGUtZmUxNi00YmEyLTllNTctNjYyNjZlZGViNmFhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg",
+      "name": "Argylle",
+      "duration": "2h 19min",
+      "rating": "6.0",
+      "synopsis": "A reclusive author who writes espionage novels about a secret agent and a global spy syndicate realizes the plot of the new book she's writing starts to mirror real-world events, in real time.",
+      "invitedFriends": []
+    },
+    {
+      "id": "11",
+      "img": "https://m.media-amazon.com/images/M/MV5BZjI2NDNmNzEtZTAyYi00NjBhLWFkMzQtMmVjZDMxYzAzZjFiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_FMjpg_UX1000_.jpg",
+      "name": "Drive-Away Dolls",
+      "duration": "1h 24min",
+      "rating": "6.1",
+      "synopsis": "Jamie regrets her breakup with her girlfriend, while Marian needs to relax. In search of a fresh start, they embark on an unexpected road trip to Tallahassee. Things quickly go awry when they cross paths with a group of inept criminals.",
+      "invitedFriends": []
+    },
+    {
+      "id": "12",
+      "img": "https://m.media-amazon.com/images/M/MV5BZDkwOTIyZGQtYWNkOS00YzAxLTkwZWUtMzU3YjU4ZDIyYzdlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg",
+      "name": "The Beekeeper",
+      "duration": "1h 45min",
+      "rating": "6.4",
+      "synopsis": "One man's brutal campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as 'Beekeepers'.",
+      "invitedFriends": []
+    },
+    {
+      "id": "13",
+      "img": "https://m.media-amazon.com/images/M/MV5BM2NmMDQ1ZWEtNDU4OS00MGIxLWEyMGMtMTM2YmFkYzNhYmMxXkEyXkFqcGdeQXVyMTM1NjM2ODg1._V1_.jpg",
+      "name": "Saltburn",
+      "duration": "2h 11min",
+      "rating": "7.0",
+      "synopsis": "A student at Oxford University finds himself drawn into the world of a charming and aristocratic classmate, who invites him to his eccentric family's sprawling estate for a summer never to be forgotten.",
+      "invitedFriends": []
+    }
+  ]
+}
