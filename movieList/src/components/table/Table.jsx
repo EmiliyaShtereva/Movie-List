@@ -1,8 +1,24 @@
+import { useEffect, useState } from 'react'
+import * as movieService from '../../services/movieService'
 import Pagination from '../pagination/Pagination'
 import ListItem from './ListItem'
 import styles from './Table.module.css'
 
 export default function Table() {
+    const [data, setData] = useState([]);
+    const [movies, setMovies] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+
+    useEffect(() => {
+        movieService.getOnePage(Number(currentPage))
+            .then(result => {
+                setData(result);
+                setMovies(result.data);
+                console.log(result);
+            })
+            .catch(err => console.log(err));
+    }, [currentPage])
+
     return (
         <>
             <table>
@@ -15,11 +31,9 @@ export default function Table() {
                     </tr>
                 </thead>
                 <tbody>
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
+                    {movies.map(m => (
+                        <ListItem key={m.id} {...m} />
+                    ))}
                 </tbody>
             </table>
             <Pagination />
