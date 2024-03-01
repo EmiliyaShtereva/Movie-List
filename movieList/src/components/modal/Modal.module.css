@@ -93,3 +93,24 @@
     color: rgb(255, 255, 255);
     cursor: pointer;
 }
+
+.search-suggestions {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.suggestion{
+    width: 24.4vw;
+    padding: 1.5vh;
+    font-size: 2.3vh;
+    background-color: rgb(13, 18, 22);
+    border-radius: 5px;
+    color: rgb(196, 196, 196);
+}
+
+.suggestion:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
