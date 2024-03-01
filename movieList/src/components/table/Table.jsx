@@ -14,7 +14,6 @@ export default function Table() {
             .then(result => {
                 setData(result);
                 setMovies(result.data);
-                console.log(result);
             })
             .catch(err => console.log(err));
     }, [currentPage])
