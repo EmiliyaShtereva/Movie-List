@@ -19,7 +19,7 @@ export default function Pagination({
             <li
                 className={styles[`page-item`]} >
                 {prev && <button className={styles["page-button"]} onClick={() => setCurrentPage(prev)}>{prev}</button>}
-                <button className={styles["page-button"]}>{currentPage}</button>
+                <button className={styles["current-page"]}>{currentPage}</button>
                 {next && <button className={styles["page-button"]} onClick={() => setCurrentPage(next)}>{next}</button>}
             </li>
             <li className={styles["page-item"]}>

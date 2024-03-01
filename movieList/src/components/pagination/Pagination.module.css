@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-li {
+.pagination li {
     display: inline-block;
 }
 
@@ -17,8 +17,8 @@ button {
     text-decoration: none;
 }
 
-button:focus,
-button:hover {
+button:hover,
+.current-page {
     background: #000000;
     color: white;
 }
