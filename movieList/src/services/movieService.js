@@ -7,3 +7,9 @@ export const getOnePage = async (currentPage) => {
     const result = await response.data;
     return result;
 }
+
+export const getMovies = async () => {
+    const response = await axios.get(baseUrl);
+    const result = await response.data;
+    return result;
+}
