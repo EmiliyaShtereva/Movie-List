@@ -12,8 +12,8 @@ nav {
 .search-form input {
     width: 55vw;
     height: 5vh;
-    padding-left: 1.2vh;
-    font-size: 2.3vh;
+    padding-left: 1.5vh;
+    font-size: 2.7vh;
     border: none;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 5px;
@@ -28,15 +28,23 @@ nav {
     color: rgb(180, 187, 192);
 }
 
-.search-form button {
-    background-color: transparent;
-    overflow: hidden;
-    color: rgb(196, 196, 196);
-    font-size: 3vh;
-    border: none;
+.search-suggestions {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    position: relative;
 }
 
-.search-form button:hover {
-    color: rgb(130, 129, 129);
+.suggestion{
+    padding: 1.5vh;
+    font-size: 2.7vh;
+    background-color: rgb(13, 18, 22);
+    border-radius: 5px;
+    color: rgb(196, 196, 196);
+}
+
+.suggestion:hover {
     cursor: pointer;
+    background-color: black;
+    color: white;
 }
