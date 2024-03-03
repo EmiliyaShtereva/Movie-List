@@ -3,9 +3,15 @@ import Modal from '../modal/Modal'
 import MoreInfo from '../modal/MoreInfo'
 import styles from './ListItem.module.css'
 
-export default function ListItem({duration, invitedFriends, id, img, name, rating, synopsis}) {
+export default function ListItem({ duration, invitedFriends, id, img, name, rating, synopsis }) {
+    const [updateFriendList, setUpdateFriendList] = useState([...invitedFriends])
     const [showModal, setShowModal] = useState(false);
     const [showMoreInfo, setShowMoreInfo] = useState(false);
+
+    const updateListHandler = (friendList) => {
+        setUpdateFriendList(friendList);
+        console.log(friendList);
+    }
 
     return (
         <>
@@ -17,7 +23,7 @@ export default function ListItem({duration, invitedFriends, id, img, name, ratin
                     <p className={styles['movie-name']}>{name}</p>
                 </td>
                 <td className={styles['invited-friends']}>
-                    <p>{invitedFriends.join(', ')}</p>
+                    <p>{updateFriendList.join(', ')}</p>
                 </td>
                 <td className={styles['buttons']}>
                     <button onClick={() => setShowModal(true)}>Invite friends</button>
@@ -25,9 +31,28 @@ export default function ListItem({duration, invitedFriends, id, img, name, ratin
                 </td>
             </tr>
 
-            {showModal && <Modal onClose={() => setShowModal(false)} invitedFriends={invitedFriends} />}
+            {showModal &&
+                <Modal
+                    onClose={() => setShowModal(false)}
+                    updateListHandler={updateListHandler}
+                    invitedFriends={invitedFriends}
+                    img={img}
+                    name={name}
+                    duration={duration}
+                    rating={rating}
+                    synopsis={synopsis}
+                    id={id}
+                />}
 
-            {showMoreInfo && <MoreInfo onClose={() => setShowMoreInfo(false)} img={img} name={name} duration={duration} rating={rating} synopsis={synopsis} />}
+            {showMoreInfo &&
+                <MoreInfo
+                    onClose={() => setShowMoreInfo(false)}
+                    img={img}
+                    name={name}
+                    duration={duration}
+                    rating={rating}
+                    synopsis={synopsis}
+                />}
         </>
     )
 }
