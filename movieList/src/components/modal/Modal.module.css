@@ -39,6 +39,12 @@
     color: rgb(196, 196, 196);
 }
 
+.modal-content .successfuly-invited {
+    margin-top: 10px;
+    color: rgb(10, 122, 0);
+    font-size: 2vh;
+}
+
 .friends p {
     margin: 0 0 10px 0;
     border-bottom: 1px solid rgb(255, 255, 255, 0.1);
