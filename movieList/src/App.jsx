@@ -1,8 +1,8 @@
-import HomePage from "./components/home-page/HomePage"
+import Table from "./components/table/Table"
 
 function App() {
   return (
-    <HomePage />
+    <Table />
   )
 }
 
