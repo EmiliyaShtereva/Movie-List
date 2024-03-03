@@ -38,6 +38,12 @@
     color: rgb(196, 196, 196);
 }
 
+.modal-content .successfuly-invited {
+    margin-top: 10px;
+    color: rgb(10, 122, 0);
+    font-size: 2vh;
+}
+
 .movie-image {
     float: left;
     width: 7vw;
