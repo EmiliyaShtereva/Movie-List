@@ -3,6 +3,8 @@ import * as movieService from '../../services/movieService'
 import Pagination from '../pagination/Pagination'
 import ListItem from './ListItem'
 import styles from './Table.module.css'
+import Footer from '../footer/Footer'
+import NavBar from '../navbar/NavBar'
 
 export default function Table() {
     const [data, setData] = useState([]);
@@ -16,10 +18,11 @@ export default function Table() {
                 setMovies(result.data);
             })
             .catch(err => console.log(err));
-    }, [currentPage])
+    }, [currentPage]);
 
     return (
         <>
+            <NavBar />
             <table>
                 <thead>
                     <tr>
@@ -27,6 +30,7 @@ export default function Table() {
                         <th></th>
                         <th>Invited Friends</th>
                         <th>Actions</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,6 +45,8 @@ export default function Table() {
                 currentPage={currentPage}
                 setCurrentPage={setCurrentPage}
             />
+
+            <Footer />
         </>
     )
 }
