@@ -13,3 +13,15 @@ export const getMovies = async () => {
     const result = await response.data;
     return result;
 }
+
+export const addFriendsToList = async (img, name, duration, rating, synopsis, id, friendsToInvite) => {
+    const response = await axios.put(`${baseUrl}/${id}`, {
+        img: img,
+        name: name,
+        duration: duration,
+        rating: rating,
+        synopsis: synopsis,
+        invitedFriends: [...friendsToInvite]
+    });
+    return response;
+}
