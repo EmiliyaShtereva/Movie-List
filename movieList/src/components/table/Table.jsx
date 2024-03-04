@@ -28,7 +28,7 @@ export default function Table() {
                     <tr>
                         <th>Movie</th>
                         <th></th>
-                        <th>Invited Friends</th>
+                        <th>Invited Friends and Groups</th>
                         <th>Actions</th>
                         <th></th>
                     </tr>
