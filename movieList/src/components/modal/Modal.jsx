@@ -43,7 +43,7 @@ export default function Modal({ onClose, updateListHandler, invitedFriends, img,
         if (friendsInGroup) {
             setFriendsToInvite(state => ([...state, { id: friendId, name: friendName, friends: friendsInGroup }]));
         } else {
-            setFriendsToInvite(state => ([...state, { id: friendId, name: friendName}]));
+            setFriendsToInvite(state => ([...state, { id: friendId, name: friendName }]));
         }
     }
 
@@ -61,9 +61,20 @@ export default function Modal({ onClose, updateListHandler, invitedFriends, img,
 
     return (
         <div className={styles["modal"]}>
-            <div className={styles["backdrop"]} onClick={() => { onClose(); setSuccessfulyInvited(false); }}></div>
+            <div className={styles["backdrop"]}
+                onClick={() => {
+                    onClose();
+                    setSuccessfulyInvited(false);
+                }}>
+            </div>
             <div className={styles["modal-content"]}>
-                <span className={styles["close"]} onClick={() => { onClose(); setSuccessfulyInvited(false); }}>&times;</span>
+                <span className={styles["close"]}
+                    onClick={() => {
+                        onClose();
+                        setSuccessfulyInvited(false);
+                    }}>
+                    &times;
+                </span>
                 <form className={styles["search-form"]} autoComplete='off'>
                     <input
                         type="text"
@@ -92,9 +103,9 @@ export default function Modal({ onClose, updateListHandler, invitedFriends, img,
                 <p>Invited Friends:</p>
                 <div className={styles["friends"]}>
                     {friendsToInvite.map(f => (
-                        f.friends 
-                        ? <p key={f.id}>{f.name}: {[...f.friends].join(', ')}</p> 
-                        : <p key={f.id}>{f.name}</p> 
+                        f.friends
+                            ? <p key={f.id}>{f.name}: {[...f.friends].join(', ')}</p>
+                            : <p key={f.id}>{f.name}</p>
                     ))}
                 </div>
             </div>

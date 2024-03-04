@@ -26,21 +26,36 @@ export default function NavBar() {
 
     return (
         <>
-        <header>
-            <nav>
-                <div>
-                    <form className={styles["search-form"]} autoComplete='off'>
-                        <input type="text" placeholder="Search movie..." name="search" onClick={() => setShowSuggestions(true)} onChange={onChange} value={value} />
-                        <ul className={styles["search-suggestions"]}>
-                            {showSuggestions && suggestions.map((s, i) => (
-                                <li key={s.id} className={styles["suggestion"]} onClick={() => movieClickHandler(i)}>{s.name}</li>
-                            ))}
-                        </ul>
-                    </form>
-                </div>
-            </nav>
-        </header>
-        {showMovieModal && <MovieSearchModal onClose={() => {setShowMovieModal(false); setShowSuggestions(false);}} {...suggestions[suggestionIndex]}/>}
+            <header>
+                <nav>
+                    <div>
+                        <form className={styles["search-form"]} autoComplete="off">
+                            <input
+                                type="text"
+                                placeholder="Search movie..."
+                                name="search"
+                                onClick={() => setShowSuggestions(true)}
+                                onChange={onChange}
+                                value={value}
+                            />
+                            <ul className={styles["search-suggestions"]}>
+                                {showSuggestions && suggestions.map((s, i) => (
+                                    <li key={s.id} className={styles["suggestion"]} onClick={() => movieClickHandler(i)}>{s.name}</li>
+                                ))}
+                            </ul>
+                        </form>
+                    </div>
+                </nav>
+            </header>
+            {showMovieModal &&
+                <MovieSearchModal
+                    onClose={() => {
+                        setShowMovieModal(false);
+                        setShowSuggestions(false);
+                    }}
+                    {...suggestions[suggestionIndex]}
+                />
+            }
         </>
     )
 }

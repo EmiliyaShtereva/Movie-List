@@ -43,13 +43,12 @@ export default function MovieSearchModal({ onClose, duration, invitedFriends, id
         if (friendsInGroup) {
             setFriendsToInvite(state => ([...state, { id: friendId, name: friendName, friends: friendsInGroup }]));
         } else {
-            setFriendsToInvite(state => ([...state, { id: friendId, name: friendName}]));
+            setFriendsToInvite(state => ([...state, { id: friendId, name: friendName }]));
         }
     }
 
     const inviteFriendsHandler = async (e) => {
         e.preventDefault();
-        console.log(invitedFriends);
         await movieService.addFriendsToList(img, name, duration, rating, synopsis, id, friendsToInvite)
             .then(() => {
                 setSuccessfulyInvited(true);
@@ -60,19 +59,30 @@ export default function MovieSearchModal({ onClose, duration, invitedFriends, id
 
     return (
         <div className={styles["modal"]}>
-            <div className={styles["backdrop"]} onClick={() => {onClose(); setSuccessfulyInvited(false);}}></div>
+            <div className={styles["backdrop"]}
+                onClick={() => {
+                    onClose();
+                    setSuccessfulyInvited(false);
+                }}>
+            </div>
             <div className={styles["modal-content"]}>
-                <span className={styles["close"]} onClick={() => {onClose(); setSuccessfulyInvited(false);}}>&times;</span>
-                <div className={styles['movie-image']}>
+                <span className={styles["close"]}
+                    onClick={() => {
+                        onClose();
+                        setSuccessfulyInvited(false);
+                    }}>
+                    &times;
+                </span>
+                <div className={styles["movie-image"]}>
                     <img src={img} alt="movie name" />
                 </div>
-                <div className={styles['movie-info']}>
+                <div className={styles["movie-info"]}>
                     <h1>{name}</h1>
-                    <p className={styles['headers']}>Duration:</p> <p>{duration}</p>
-                    <p className={styles['headers']}>Rating:</p> <p>{rating}</p>
-                    <p className={styles['headers']}>Synopsis:</p> <p>{synopsis}</p>
+                    <p className={styles["headers"]}>Duration:</p> <p>{duration}</p>
+                    <p className={styles["headers"]}>Rating:</p> <p>{rating}</p>
+                    <p className={styles["headers"]}>Synopsis:</p> <p>{synopsis}</p>
                 </div>
-                <form className={styles["search-form"]} autoComplete='off'>
+                <form className={styles["search-form"]} autoComplete="off">
                     <input
                         type="text"
                         placeholder="Search friend..."
@@ -100,9 +110,9 @@ export default function MovieSearchModal({ onClose, duration, invitedFriends, id
                 <p>Invited Friends:</p>
                 <div className={styles["friends"]}>
                     {friendsToInvite.map(f => (
-                        f.friends 
-                        ? <p key={f.id}>{f.name}: {[...f.friends].join(', ')}</p> 
-                        : <p key={f.id}>{f.name}</p> 
+                        f.friends
+                            ? <p key={f.id}>{f.name}: {[...f.friends].join(", ")}</p>
+                            : <p key={f.id}>{f.name}</p>
                     ))}
                 </div>
             </div>

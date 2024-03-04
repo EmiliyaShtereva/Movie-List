@@ -1,24 +1,24 @@
 footer {
-    padding-top: 2.5em;
-    position: absolute;
-    width: 100%;
-    background: rgb(11, 11, 11);
-    text-align: center;
-    color: white;
-  }
-  
-  footer .other-pages a{
-    margin: 20px;
-    color: rgb(136, 136, 136);
-    text-decoration: none;
-  }
-  
-  footer .other-pages a:hover{
-    color: rgb(255, 255, 255);
-  }
-  
-  footer .copyright {
-    margin-top: 30px;
-    padding: 2px;
-    background-color: black;
-  }
+  padding-top: 2.5em;
+  position: absolute;
+  width: 100%;
+  background: rgb(11, 11, 11);
+  text-align: center;
+  color: white;
+}
+
+footer .other-pages a {
+  margin: 20px;
+  color: rgb(136, 136, 136);
+  text-decoration: none;
+}
+
+footer .other-pages a:hover {
+  color: rgb(255, 255, 255);
+}
+
+footer .copyright {
+  margin-top: 30px;
+  padding: 2px;
+  background-color: black;
+}

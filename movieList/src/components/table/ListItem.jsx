@@ -27,16 +27,16 @@ export default function ListItem({ duration, invitedFriends, id, img, name, rati
     return (
         <>
             <tr>
-                <td className={styles['movie-image']}>
+                <td className={styles["movie-image"]}>
                     <img src={img} alt="movie name" />
                 </td>
-                <td className={styles['movie']}>
-                    <p className={styles['movie-name']}>{name}</p>
+                <td className={styles["movie"]}>
+                    <p className={styles["movie-name"]}>{name}</p>
                 </td>
-                <td className={styles['invited-friends']}>
-                    <p>{updateFriendList.join(', ')}</p>
+                <td className={styles["invited-friends"]}>
+                    <p>{updateFriendList.join(", ")}</p>
                 </td>
-                <td className={styles['buttons']}>
+                <td className={styles["buttons"]}>
                     <button onClick={() => setShowModal(true)}>Invite friends</button>
                     <button onClick={() => setShowMoreInfo(true)}><i className="fa-solid fa-info"></i></button>
                 </td>
