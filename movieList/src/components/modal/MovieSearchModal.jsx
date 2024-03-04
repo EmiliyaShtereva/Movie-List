@@ -8,6 +8,7 @@ export default function MovieSearchModal({ onClose, duration, invitedFriends, id
     let [friends, setFriends] = useState([]);
     let [friendsToInvite, setFriendsToInvite] = useState([...invitedFriends]);
     let [showSuggestions, setShowSuggestions] = useState(false);
+    let [disabledButton, setDisabledButton] = useState(true);
     let [successfulyInvited, setSuccessfulyInvited] = useState(false);
     let { value, suggestions, onChange } = useSearch(friends);
 
@@ -17,24 +18,42 @@ export default function MovieSearchModal({ onClose, duration, invitedFriends, id
                 setFriends(result);
             })
             .catch(err => console.log(err));
+
+        friendsService.getFriendGroups()
+            .then(result => {
+                result.forEach(element => {
+                    setFriends(state => [...state, element]);
+                });
+            })
+            .catch(err => console.log(err));
     }, []);
 
-    const friendClickHandler = (friendId, friendName) => {
+    const friendClickHandler = (friendId, friendName, friendsInGroup) => {
         for (let i = 0; i < friendsToInvite.length; i++) {
             if (friendsToInvite[i].name === friendName) {
                 setShowSuggestions(false);
+                setDisabledButton(true);
                 return friendsToInvite;
             }
         }
+
         setShowSuggestions(false);
-        setFriendsToInvite(state => ([...state, { id: friendId, name: friendName }]));
+        setDisabledButton(false);
+
+        if (friendsInGroup) {
+            setFriendsToInvite(state => ([...state, { id: friendId, name: friendName, friends: friendsInGroup }]));
+        } else {
+            setFriendsToInvite(state => ([...state, { id: friendId, name: friendName}]));
+        }
     }
 
     const inviteFriendsHandler = async (e) => {
         e.preventDefault();
+        console.log(invitedFriends);
         await movieService.addFriendsToList(img, name, duration, rating, synopsis, id, friendsToInvite)
             .then(() => {
                 setSuccessfulyInvited(true);
+                setDisabledButton(true);
             })
             .catch(err => console.log(err));
     }
@@ -62,7 +81,7 @@ export default function MovieSearchModal({ onClose, duration, invitedFriends, id
                         onChange={onChange}
                         value={value}
                     />
-                    <button type="submit" onClick={inviteFriendsHandler}>Invite friends</button>
+                    <button type="submit" disabled={disabledButton} onClick={inviteFriendsHandler}>Invite friends</button>
                     {successfulyInvited && <p className={styles["successfuly-invited"]}>Successfuly Invited Friends</p>}
                     {showSuggestions && (
                         <ul className={styles["search-suggestions"]}>
@@ -70,7 +89,7 @@ export default function MovieSearchModal({ onClose, duration, invitedFriends, id
                                 <li
                                     key={s.id}
                                     className={styles["suggestion"]}
-                                    onClick={() => friendClickHandler(s.id, s.name)}
+                                    onClick={() => friendClickHandler(s.id, s.name, s.friends)}
                                 >
                                     {s.name}
                                 </li>
@@ -81,7 +100,9 @@ export default function MovieSearchModal({ onClose, duration, invitedFriends, id
                 <p>Invited Friends:</p>
                 <div className={styles["friends"]}>
                     {friendsToInvite.map(f => (
-                        <p key={f.id}>{f.name}</p>
+                        f.friends 
+                        ? <p key={f.id}>{f.name}: {[...f.friends].join(', ')}</p> 
+                        : <p key={f.id}>{f.name}</p> 
                     ))}
                 </div>
             </div>
