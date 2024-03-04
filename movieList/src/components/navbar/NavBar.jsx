@@ -8,6 +8,7 @@ export default function NavBar() {
     let [movies, setMovies] = useState([]);
     let [showMovieModal, setShowMovieModal] = useState(false);
     let [suggestionIndex, setSuggestionIndex] = useState(0);
+    let [showSuggestions, setShowSuggestions] = useState(false);
     let { value, suggestions, onChange } = useSearch(movies);
 
     const movieClickHandler = (index) => {
@@ -29,9 +30,9 @@ export default function NavBar() {
             <nav>
                 <div>
                     <form className={styles["search-form"]} autoComplete='off'>
-                        <input type="text" placeholder="Search movie..." name="search" onChange={onChange} value={value} />
+                        <input type="text" placeholder="Search movie..." name="search" onClick={() => setShowSuggestions(true)} onChange={onChange} value={value} />
                         <ul className={styles["search-suggestions"]}>
-                            {suggestions.map((s, i) => (
+                            {showSuggestions && suggestions.map((s, i) => (
                                 <li key={s.id} className={styles["suggestion"]} onClick={() => movieClickHandler(i)}>{s.name}</li>
                             ))}
                         </ul>
@@ -39,7 +40,7 @@ export default function NavBar() {
                 </div>
             </nav>
         </header>
-        {showMovieModal && <MovieSearchModal onClose={() => setShowMovieModal(false)} {...suggestions[suggestionIndex]}/>}
+        {showMovieModal && <MovieSearchModal onClose={() => {setShowMovieModal(false); setShowSuggestions(false);}} {...suggestions[suggestionIndex]}/>}
         </>
     )
 }
