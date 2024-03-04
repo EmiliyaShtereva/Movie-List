@@ -25,6 +25,26 @@
       "name": "Ekaterina Velika"
     }
   ],
+  "friendGroups": [
+    {
+      "id": "10",
+      "name": "The big 3",
+      "friends": [
+        "Nick Pekov",
+        "Nasko Kashona",
+        "Ekaterina Velika"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Cool friends",
+      "friends": [
+        "Vlado Petrankov",
+        "Ema Stoyanova",
+        "Nick Pekov"
+      ]
+    }
+  ],
   "movies": [
     {
       "img": "https://m.media-amazon.com/images/M/MV5BNGIyYWMzNjktNDE3MC00YWQyLWEyMmEtN2ZmNzZhZDk3NGJlXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
@@ -38,8 +58,13 @@
           "name": "Jesica Hopkins"
         },
         {
-          "id": "2",
-          "name": "Vlado Petrankov"
+          "id": "10",
+          "name": "The big 3",
+          "friends": [
+            "Nick Pekov",
+            "Nasko Kashona",
+            "Ekaterina Velika"
+          ]
         },
         {
           "id": "3",
@@ -48,6 +73,10 @@
         {
           "id": "4",
           "name": "Nick Pekov"
+        },
+        {
+          "id": "6",
+          "name": "Ekaterina Velika"
         }
       ],
       "id": "1"
@@ -68,12 +97,13 @@
           "name": "Jesica Hopkins"
         },
         {
-          "id": "2",
-          "name": "Vlado Petrankov"
-        },
-        {
-          "id": "6",
-          "name": "Ekaterina Velika"
+          "id": "11",
+          "name": "Cool friends",
+          "friends": [
+            "Vlado Petrankov",
+            "Ema Stoyanova",
+            "Nick Pekov"
+          ]
         }
       ],
       "id": "2"
@@ -112,16 +142,13 @@
       "synopsis": "With dreams of opening a shop in a city renowned for its chocolate, a young and poor Willy Wonka discovers that the industry is run by a cartel of greedy chocolatiers.",
       "invitedFriends": [
         {
-          "id": "1",
-          "name": "Jesica Hopkins"
-        },
-        {
-          "id": "2",
-          "name": "Vlado Petrankov"
-        },
-        {
-          "id": "3",
-          "name": "Ema Stoyanova"
+          "id": "11",
+          "name": "Cool friends",
+          "friends": [
+            "Vlado Petrankov",
+            "Ema Stoyanova",
+            "Nick Pekov"
+          ]
         }
       ],
       "id": "4"
