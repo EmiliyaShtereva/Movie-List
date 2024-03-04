@@ -133,6 +133,12 @@
     cursor: pointer;
 }
 
+.search-form button:disabled {
+    color: rgb(99, 99, 99);
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+}
+
 .search-suggestions {
     padding: 0;
     margin: 0;
