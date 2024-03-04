@@ -4,6 +4,7 @@ import MoreInfo from '../modal/MoreInfo'
 import styles from './ListItem.module.css'
 
 export default function ListItem({ duration, invitedFriends, id, img, name, rating, synopsis }) {
+    const [friendsList, setFriendsList] = useState([...invitedFriends])
     const [updateFriendList, setUpdateFriendList] = useState(() => {
         let arr = [];
         for (let i = 0; i < invitedFriends.length; i++) {
@@ -20,6 +21,7 @@ export default function ListItem({ duration, invitedFriends, id, img, name, rati
             arr.push(friendList[i].name)
         }
         setUpdateFriendList(arr);
+        setFriendsList(friendList);
     }
 
     return (
@@ -43,7 +45,7 @@ export default function ListItem({ duration, invitedFriends, id, img, name, rati
                         <Modal
                             onClose={() => setShowModal(false)}
                             updateListHandler={updateListHandler}
-                            invitedFriends={invitedFriends}
+                            invitedFriends={friendsList}
                             img={img}
                             name={name}
                             duration={duration}
