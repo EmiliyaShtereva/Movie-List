@@ -77,7 +77,7 @@ export default function MovieSearchModal({ onClose, duration, invitedFriends, id
                     <img src={img} alt="movie name" />
                 </div>
                 <div className={styles["movie-info"]}>
-                    <h1>{name}</h1>
+                    <h1 data-testid="movie-name">{name}</h1>
                     <p className={styles["headers"]}>Duration:</p> <p>{duration}</p>
                     <p className={styles["headers"]}>Rating:</p> <p>{rating}</p>
                     <p className={styles["headers"]}>Synopsis:</p> <p>{synopsis}</p>
@@ -97,6 +97,7 @@ export default function MovieSearchModal({ onClose, duration, invitedFriends, id
                         <ul className={styles["search-suggestions"]}>
                             {suggestions.map((s) => (
                                 <li
+                                    data-testid="friend-suggestions"
                                     key={s.id}
                                     className={styles["suggestion"]}
                                     onClick={() => friendClickHandler(s.id, s.name, s.friends)}

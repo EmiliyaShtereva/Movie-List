@@ -26,7 +26,7 @@ export default function Table() {
             <table>
                 <thead>
                     <tr>
-                        <th>Movie</th>
+                        <th data-testid="movie">Movie</th>
                         <th></th>
                         <th>Invited Friends and Groups</th>
                         <th>Actions</th>

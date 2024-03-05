@@ -72,7 +72,7 @@ export default function Modal({ onClose, updateListHandler, invitedFriends, img,
                     onClick={() => {
                         onClose();
                         setSuccessfulyInvited(false);
-                    }}>
+                    }} data-testid="close">
                     &times;
                 </span>
                 <form className={styles["search-form"]} autoComplete='off'>

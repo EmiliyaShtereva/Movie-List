@@ -25,46 +25,44 @@ export default function ListItem({ duration, invitedFriends, id, img, name, rati
     }
 
     return (
-        <>
-            <tr>
-                <td className={styles["movie-image"]}>
-                    <img src={img} alt="movie name" />
-                </td>
-                <td className={styles["movie"]}>
-                    <p className={styles["movie-name"]}>{name}</p>
-                </td>
-                <td className={styles["invited-friends"]}>
-                    <p>{updateFriendList.join(", ")}</p>
-                </td>
-                <td className={styles["buttons"]}>
-                    <button onClick={() => setShowModal(true)}>Invite friends</button>
-                    <button onClick={() => setShowMoreInfo(true)}><i className="fa-solid fa-info"></i></button>
-                </td>
-                <td>
-                    {showModal &&
-                        <Modal
-                            onClose={() => setShowModal(false)}
-                            updateListHandler={updateListHandler}
-                            invitedFriends={friendsList}
-                            img={img}
-                            name={name}
-                            duration={duration}
-                            rating={rating}
-                            synopsis={synopsis}
-                            id={id}
-                        />}
+        <tr data-testid="rows">
+            <td className={styles["movie-image"]}>
+                <img src={img} alt="movie name" />
+            </td>
+            <td className={styles["movie"]}>
+                <p className={styles["movie-name"]}>{name}</p>
+            </td>
+            <td className={styles["invited-friends"]}>
+                <p>{updateFriendList.join(", ")}</p>
+            </td>
+            <td className={styles["buttons"]}>
+                <button onClick={() => setShowModal(true)}>Invite friends</button>
+                <button onClick={() => setShowMoreInfo(true)} data-testid="more-info"><i className="fa-solid fa-info"></i></button>
+            </td>
+            <td>
+                {showModal &&
+                    <Modal
+                        onClose={() => setShowModal(false)}
+                        updateListHandler={updateListHandler}
+                        invitedFriends={friendsList}
+                        img={img}
+                        name={name}
+                        duration={duration}
+                        rating={rating}
+                        synopsis={synopsis}
+                        id={id}
+                    />}
 
-                    {showMoreInfo &&
-                        <MoreInfo
-                            onClose={() => setShowMoreInfo(false)}
-                            img={img}
-                            name={name}
-                            duration={duration}
-                            rating={rating}
-                            synopsis={synopsis}
-                        />}
-                </td>
-            </tr>
-        </>
+                {showMoreInfo &&
+                    <MoreInfo
+                        onClose={() => setShowMoreInfo(false)}
+                        img={img}
+                        name={name}
+                        duration={duration}
+                        rating={rating}
+                        synopsis={synopsis}
+                    />}
+            </td>
+        </tr>
     )
 }

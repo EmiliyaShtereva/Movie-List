@@ -10,7 +10,7 @@ export default function MoreInfo({onClose, img, name, duration, rating, synopsis
                     <img src={img} alt="movie name" />
                 </div>
                 <div className={styles["movie-info"]}>
-                    <h1>{name}</h1>
+                    <h1 data-testid="movie-name">{name}</h1>
                     <p><p className={styles["headers"]}>Duration:</p> {duration}</p>
                     <p><p className={styles["headers"]}>Rating:</p> {rating}</p>
                     <p><p className={styles["headers"]}>Synopsis:</p> {synopsis}</p>
