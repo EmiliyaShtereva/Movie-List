@@ -5,22 +5,12 @@ import styles from './ListItem.module.css'
 
 export default function ListItem({ duration, invitedFriends, id, img, name, rating, synopsis }) {
     const [friendsList, setFriendsList] = useState([...invitedFriends])
-    const [updateFriendList, setUpdateFriendList] = useState(() => {
-        let arr = [];
-        for (let i = 0; i < invitedFriends.length; i++) {
-            arr.push(invitedFriends[i].name)
-        }
-        return arr;
-    })
+    const [updateFriendList, setUpdateFriendList] = useState(() => invitedFriends.map(f => f.name))
     const [showModal, setShowModal] = useState(false);
     const [showMoreInfo, setShowMoreInfo] = useState(false);
 
     const updateListHandler = (friendList) => {
-        let arr = [];
-        for (let i = 0; i < friendList.length; i++) {
-            arr.push(friendList[i].name)
-        }
-        setUpdateFriendList(arr);
+        setUpdateFriendList(() => friendList.map(f => f.name));
         setFriendsList(friendList);
     }
 
