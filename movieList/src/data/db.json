@@ -52,42 +52,7 @@
       "duration": "2h 21min",
       "rating": "8.3",
       "synopsis": "The incredible tale about the fantastical evolution of Bella Baxter, a young woman brought back to life by the brilliant and unorthodox scientist Dr. Godwin Baxter.",
-      "invitedFriends": [
-        {
-          "id": "1",
-          "name": "Jesica Hopkins"
-        },
-        {
-          "id": "10",
-          "name": "The big 3",
-          "friends": [
-            "Nick Pekov",
-            "Nasko Kashona",
-            "Ekaterina Velika"
-          ]
-        },
-        {
-          "id": "3",
-          "name": "Ema Stoyanova"
-        },
-        {
-          "id": "4",
-          "name": "Nick Pekov"
-        },
-        {
-          "id": "6",
-          "name": "Ekaterina Velika"
-        },
-        {
-          "id": "11",
-          "name": "Cool friends",
-          "friends": [
-            "Vlado Petrankov",
-            "Ema Stoyanova",
-            "Nick Pekov"
-          ]
-        }
-      ],
+      "invitedFriends": [],
       "id": "1"
     },
     {
@@ -96,25 +61,7 @@
       "duration": "3h",
       "rating": "8.4",
       "synopsis": "The story of American scientist J. Robert Oppenheimer and his role in the development of the atomic bomb.",
-      "invitedFriends": [
-        {
-          "id": "4",
-          "name": "Nick Pekov"
-        },
-        {
-          "id": "1",
-          "name": "Jesica Hopkins"
-        },
-        {
-          "id": "11",
-          "name": "Cool friends",
-          "friends": [
-            "Vlado Petrankov",
-            "Ema Stoyanova",
-            "Nick Pekov"
-          ]
-        }
-      ],
+      "invitedFriends": [],
       "id": "2"
     },
     {
@@ -123,24 +70,7 @@
       "duration": "2h 35min",
       "rating": "8.0",
       "synopsis": "A noble family becomes embroiled in a war for control over the galaxy's most valuable asset while its heir becomes troubled by visions of a dark future.",
-      "invitedFriends": [
-        {
-          "id": "1",
-          "name": "Jesica Hopkins"
-        },
-        {
-          "id": "4",
-          "name": "Nick Pekov"
-        },
-        {
-          "id": "6",
-          "name": "Ekaterina Velika"
-        },
-        {
-          "id": "3",
-          "name": "Ema Stoyanova"
-        }
-      ],
+      "invitedFriends": [],
       "id": "3"
     },
     {
@@ -149,21 +79,7 @@
       "duration": "1h 56min",
       "rating": "7.1",
       "synopsis": "With dreams of opening a shop in a city renowned for its chocolate, a young and poor Willy Wonka discovers that the industry is run by a cartel of greedy chocolatiers.",
-      "invitedFriends": [
-        {
-          "id": "11",
-          "name": "Cool friends",
-          "friends": [
-            "Vlado Petrankov",
-            "Ema Stoyanova",
-            "Nick Pekov"
-          ]
-        },
-        {
-          "id": "2",
-          "name": "Vlado Petrankov"
-        }
-      ],
+      "invitedFriends": [],
       "id": "4"
     },
     {
