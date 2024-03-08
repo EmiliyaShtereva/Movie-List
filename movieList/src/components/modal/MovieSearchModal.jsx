@@ -13,20 +13,43 @@ export default function MovieSearchModal({ onClose, duration, invitedFriends, id
     let { value, suggestions, onChange } = useSearch(friends);
 
     useEffect(() => {
+        let data = [];
         friendsService.getFriends()
             .then(result => {
-                setFriends(result);
+                for (let i = 0; i < result.length; i++) {
+                    let shouldBePushed = true;
+                    for (let j = 0; j < friendsToInvite.length; j++) {
+                        if (result[i].name === friendsToInvite[j].name) {
+                            shouldBePushed = false;
+                        }
+                    }
+
+                    if (shouldBePushed) {
+                        data.push(result[i]);
+                    }
+                }
             })
             .catch(err => console.log(err));
 
         friendsService.getFriendGroups()
             .then(result => {
-                result.forEach(element => {
-                    setFriends(state => [...state, element]);
-                });
+                for (let i = 0; i < result.length; i++) {
+                    let shouldBePushed = true;
+                    for (let j = 0; j < friendsToInvite.length; j++) {
+                        if (result[i].name === friendsToInvite[j].name) {
+                            shouldBePushed = false;
+                        }
+                    }
+
+                    if (shouldBePushed) {
+                        data.push(result[i]);
+                    }
+                }
             })
             .catch(err => console.log(err));
-    }, []);
+
+        setFriends(data);
+    }, [])
 
     const friendClickHandler = (friendId, friendName, friendsInGroup) => {
         for (let i = 0; i < friendsToInvite.length; i++) {

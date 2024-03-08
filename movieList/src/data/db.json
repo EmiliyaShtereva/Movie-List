@@ -77,6 +77,15 @@
         {
           "id": "6",
           "name": "Ekaterina Velika"
+        },
+        {
+          "id": "11",
+          "name": "Cool friends",
+          "friends": [
+            "Vlado Petrankov",
+            "Ema Stoyanova",
+            "Nick Pekov"
+          ]
         }
       ],
       "id": "1"
@@ -149,6 +158,10 @@
             "Ema Stoyanova",
             "Nick Pekov"
           ]
+        },
+        {
+          "id": "2",
+          "name": "Vlado Petrankov"
         }
       ],
       "id": "4"
