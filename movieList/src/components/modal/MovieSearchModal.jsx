@@ -22,6 +22,12 @@ export default function MovieSearchModal({ onClose, duration, invitedFriends, id
                         if (result[i].name === friendsToInvite[j].name) {
                             shouldBePushed = false;
                         }
+
+                        if (friendsToInvite[j].friends) {
+                            if (friendsToInvite[j].friends.includes(result[i].name)) {
+                                shouldBePushed = false;
+                            }
+                        }
                     }
 
                     if (shouldBePushed) {
@@ -49,7 +55,7 @@ export default function MovieSearchModal({ onClose, duration, invitedFriends, id
             .catch(err => console.log(err));
 
         setFriends(data);
-    }, [])
+    }, [showSuggestions]);
 
     const friendClickHandler = (friendId, friendName, friendsInGroup) => {
         for (let i = 0; i < friendsToInvite.length; i++) {

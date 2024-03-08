@@ -22,6 +22,12 @@ export default function Modal({ onClose, updateListHandler, invitedFriends, img,
                         if (result[i].name === friendsToInvite[j].name) {
                             shouldBePushed = false;
                         }
+
+                        if (friendsToInvite[j].friends) {
+                            if (friendsToInvite[j].friends.includes(result[i].name)) {
+                                shouldBePushed = false;
+                            }
+                        }
                     }
 
                     if (shouldBePushed) {
@@ -49,7 +55,7 @@ export default function Modal({ onClose, updateListHandler, invitedFriends, img,
             .catch(err => console.log(err));
 
         setFriends(data);
-    }, [])
+    }, [showSuggestions]);
 
     const friendClickHandler = (friendId, friendName, friendsInGroup) => {
         for (let i = 0; i < friendsToInvite.length; i++) {
